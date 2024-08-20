@@ -1,0 +1,24 @@
+<div class="bg-dark mt-5 pt-5">
+  <div class="container bg-dark">
+    <div class="row">
+      @for (movie of Movies; track $index) {
+      <div class="col-md-3 g-5">
+        <div class="text-white">
+          <img class="w-100" [src]="imgsrc + movie.poster_path" alt="poster" />
+          <div class="mt-4">
+            <h3>Title : {{ movie.title }} {{ movie.name }}</h3>
+            <p>Overview : {{ movie.overview.split(" ", 4).join(" ") }}</p>
+            <p>Release date : {{ movie.release_date }}</p>
+            <span>Rate : {{ movie.vote_average }}/10 </span>
+            <div class="pt-4">
+          
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</div>
